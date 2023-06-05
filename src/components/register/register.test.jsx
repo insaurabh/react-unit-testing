@@ -14,7 +14,9 @@ describe("Register component", () => {
 
     it("should show error message when all the fields are not filled", async () => {
         render(<Register />);
-        const buttonElement = screen.getByRole('button');
+        const buttonElement = screen.getByRole('button', {
+            name: /^Register$/
+        });
         await userEvent.click(buttonElement);
         const alertElement = screen.getByRole('alert');
         expect(alertElement).toBeInTheDocument();
