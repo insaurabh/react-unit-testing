@@ -12,7 +12,7 @@ describe("It should show two input fields", () => {
     const inputs = screen.getAllByRole("textbox");
     const button = screen.getByRole("button");
 
-    expect(inputs).toHaveLength(2);
+    expect(inputs).toHaveLength(3);
     expect(button).toBeInTheDocument();
   });
 
