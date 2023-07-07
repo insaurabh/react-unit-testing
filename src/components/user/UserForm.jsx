@@ -15,8 +15,9 @@ const UserForm = ({onUserAdded}) => {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Name</label>
+          <label htmlFor='userName'>Name</label>
           <input
+            id="userName"
             type="text"
             name="name"
             aria-label="User Name"
@@ -26,8 +27,9 @@ const UserForm = ({onUserAdded}) => {
         </div>
 
         <div>
-          <label>Email</label>
+          <label htmlFor='userEmail'>Email</label>
           <input
+            id="userEmail"
             type="email"
             name="email"
             aria-label="User Email"
