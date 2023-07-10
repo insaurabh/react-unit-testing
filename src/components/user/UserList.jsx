@@ -1,8 +1,9 @@
-const UserList = ({users}) => {
-    const renderedUsers = users.map((user, i) => {
+const UserList = ({ userList }) => {
+    console.log('users list', JSON.stringify(userList))
+    const renderedUsers = userList.map((user, i) => {
         return (
-            <tr key={`${user.userName}-${i}`}>
-                <td>{user.userName}</td>
+            <tr key={`${user.name}-${i}`}>
+                <td>{user.name}</td>
                 <td>{user.email}</td>
             </tr>
         )
@@ -15,7 +16,7 @@ const UserList = ({users}) => {
                     <th>Email</th>
                 </tr>
             </thead>
-            <tbody>{renderedUsers}</tbody>
+            <tbody data-testid="users">{renderedUsers}</tbody>
         </table>
     )
 }
